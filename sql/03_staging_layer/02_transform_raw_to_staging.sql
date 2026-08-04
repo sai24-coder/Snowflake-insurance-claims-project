@@ -20,3 +20,16 @@ INSERT INTO INSURANCE_STAGING.CUSTOMER_STAGING (
   UPPER(TRIM(ADDRESS)), 
   CREATED_AT
   FROM INSURANCE_RAW.CUSTOMER_RAW;
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  INSERT INTO INSURANCE_STAGING.POLICY_STAGING
+  SELECT
+  POLICY_ID,
+  CUSTOMER_ID,
+  UPPER(TRIM(POLICY_TYPE)),
+  POLICY_START_DATE,
+  POLICY_END_DATE,
+  PREMIUM_AMOUNT,
+  UPPER(TRIM(POLICY_STATUS))
+  FROM INSURANCE_RAW.POLICY_RAW;
