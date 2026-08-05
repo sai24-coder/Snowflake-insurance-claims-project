@@ -33,3 +33,15 @@ INSERT INTO INSURANCE_STAGING.CUSTOMER_STAGING (
   PREMIUM_AMOUNT,
   UPPER(TRIM(POLICY_STATUS))
   FROM INSURANCE_RAW.POLICY_RAW;
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+  INSERT INTO INSURANCE_STAGING.CLAIM_STAGING
+  SELECT 
+  CLAIM_ID,
+  POLICY_ID,
+  CLAIM_DATE,
+  CLAIM_AMOUNT,
+  UPPER(TRIM(CLAIM_STATUS)),
+  TRIM(CLAIM_DESCRIPTION)
+  FROM INSURANCE_RAW.CLAIM_RAW;
