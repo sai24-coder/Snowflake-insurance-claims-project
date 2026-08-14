@@ -1,0 +1,17 @@
+-- customer ID should never be null
+
+SELECT * 
+FROM INSURANCE_ODS.CUSTOMER_ODS 
+WHERE CUSTOMER_ID IS NULL;
+
+-- Policy ID should never be null
+
+SELECT *
+FROM INSURANCE_ODS.POLICY_ODS 
+WHERE POLICY_ID IS NULL;
+
+-- Claim ID should never be null
+
+SELECT *
+FROM INSURANCE_ODS.CLAIM_ODS 
+WHERE CLAIM_ID IS NULL;
