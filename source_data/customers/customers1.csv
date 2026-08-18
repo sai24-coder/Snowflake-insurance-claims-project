@@ -1,0 +1,4 @@
+CUSTOMER_ID, FIRST_NAME, LAST_NAME, EMAIL
+1, John, Smith,john@gmail.com
+ABC, Ram, Kumar, ram@gmail.com
+3, David, Miller,david@gmail.com
